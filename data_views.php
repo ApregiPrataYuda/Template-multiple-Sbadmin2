@@ -28,51 +28,11 @@
                      <thead>
                        <tr>
                          <th style="width:5%;">No#</th>
-                         <th>TITLE LOKER</th>
-                         <th>CONTENT LOKER</th>
-                         <th>NAMA PERUSAHAAN</th>
-                         <th>TANGGAL UPLOAD LOKER</th>
-                         <th>TANGGAL DATELINE LOKER</th>
-                         <th>SUMBER LOKER</th>
-                         <th>IMAGE LOKER</th>
-                         <th>EXPRIENCE</th>
-                         <th>SALARY</th>
-                         <th>GENDER</th>
-                         <th>USER UPLOAD LOKER</th>
-                         <th>KATEGORY LOKER</th>
-                         <th>TYPE LOKER</th>
-                         <th>DAERAH LOKER</th>
+                        <th>TITLE </th>
                          <th style="width:5%;">PILIHAN</th>
                        </tr>
                      </thead>
-                  <?php
-                          $no = 1;
-                          foreach ($row->result() as $key => $data) { ?>
-                       <tr>
-                         <td><?= $no++ ?></td>
-                         <td><?= $data->title ?></td>
-                         <td><?= substr(strip_tags($data->content), 0, 50) ?>......</td>
-                         <td><?= indo_date($data->tanggal) ?></td>
-                         <td><?= indo_date($data->dateline) ?></td>
-                         <td><?= $data->sumber ?></td>
-                         <td>
-                           <?php if ($data->image != null) { ?>
-                             <img src="<?= site_url('assets/image/Sma/' . $data->image) ?>" style="width:100px;">
-                           <?php } ?>
-                         </td>
-                         <td><?= $data->exprience ?></td>
-                         <td><?= indo_currency($data->salary) ?></td>
-                         <td><?= $data->gender ?></td>
-                         <td><?= $data->name ?></td>
-                         <td><?= $data->nama ?></td>
-                         <td><?= $data->name_jobs ?></td>
-                         <td><?= $data->name_city ?></td>
-                         <td>
-                           <a href="<?= site_url('Sma/edit/' . $data->sma_id); ?>" class="btn btn-warning btn-sm btn-circle"><i class="fa fas fa-edit"></i></a>
-                           <a href="<?= site_url('Sma/delete/' . $data->sma_id); ?>" id="btn-hapus" class="btn btn-danger btn-sm btn-circle"><i class="fa fas fa-trash"></i></a>
-                         </td>
-                       </tr>
-                     <?php } ?> 
+                
                    </table>
                  </div>
                </div>
